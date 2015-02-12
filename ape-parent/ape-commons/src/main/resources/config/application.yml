@@ -1,0 +1,61 @@
+# The default spring profil 
+spring:
+  profiles.active: default
+---
+# The configuration for the default spring profil
+spring:
+  profiles: default
+info:
+  build:
+    artifact: ${project.artifactId}
+    name: ${project.name}
+    description: ${project.description}
+    version: ${project.version}
+app:
+  datasources:
+    DATASOURCE1:
+      name: DATASOURCE1 
+      driverClassName: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/myappdb1?autoReconnect=true
+      username: defaultuser1
+      password: defaultpassword1
+    DATASOURCE2:
+      name: DATASOURCE2
+      driverClassName: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/myappdb2?autoReconnect=true
+      username: defaultuser2
+      password: defaultpassword2
+---
+# The configuration for development 
+spring:
+  profiles: dev
+app:
+  datasources:
+    DATASOURCE1:
+      name: DATASOURCE1 
+      driverClassName: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/myappdb1?autoReconnect=true
+      username: devuser1
+      password: devpassword1
+    DATASOURCE2:
+      name: DATASOURCE2
+      driverClassName: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/myappdb2?autoReconnect=true
+      username: devuser2
+      password: devpassword2
+---
+# The configuration for the unit test
+spring:
+  profiles: unit-test
+app:
+  datasources:
+    DATASOURCE1:
+      name: DATASOURCE1 
+      url: jdbc:mysql://localhost:3306/myappdb1?autoReconnect=true
+      username: testuser1
+      password: testpassword1
+    DATASOURCE2:
+      name: DATASOURCE2
+      url: jdbc:mysql://localhost:3306/myappdb2?autoReconnect=true
+      username: testuser2
+      password: testpassword2
