@@ -29,8 +29,8 @@
         <maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
         <jdk.version>1.8</jdk.version>
         <!-- version for external plugin -->
-        <maven-source-plugin.version>2.4</maven-source-plugin.version>
-        <maven-compiler-plugin.version>3.3</maven-compiler-plugin.version>
+        <maven-source-plugin.version>3.0.0</maven-source-plugin.version>
+        <maven-compiler-plugin.version>3.5.1</maven-compiler-plugin.version>
         <maven-release-plugin.version>2.5.2</maven-release-plugin.version>
     </properties>
 
