@@ -1,0 +1,68 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>fr.ape.archetype</groupId>
+    <artifactId>archetype-pom</artifactId>
+    <version>0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>archetype-pom</name>
+    <description>Root pom module for all project. It contains the global configuration organization, ciManagement, Team etc ...</description>
+    <url>https://github.com/apenvern/project-archetype</url>
+    <inceptionYear>2016</inceptionYear>
+
+    <prerequisites>
+        <maven>3.0.4</maven>
+    </prerequisites>
+
+    <organization>
+        <name>APENVERN</name>
+        <url>https://github.com/apenvern/</url>
+    </organization>
+
+    <ciManagement>
+        <system>Jenkins</system>
+        <url></url>
+    </ciManagement>
+
+    <properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <timestamp>${maven.build.timestamp}</timestamp>
+        <maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
+    </properties>
+
+    <!-- Svn configuration -->
+    <scm>
+        <url>https://github.com/apenvern/project-archetype</url>
+        <connection>scm:git:ssh://git@github.com:apenvern/project-archetype.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:apenvern/project-archetype.git</developerConnection>
+    </scm>
+
+    <!-- Repository Configuration -->
+    <!-- Uncomment if you need Repository Configuration
+    <distributionManagement>
+        <snapshotRepository>
+            <id>nexus.snapshots</id>
+            <name>Nexus snapshots repository</name>
+            <url>http://hostname:8080/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>nexus.releases</id>
+            <name>Nexus relases repository</name>
+            <url>http://hostname:8190/nexus/content/repositories/releases/</url>
+        </repository>
+    </distributionManagement>
+    -->
+
+    <!-- Team -->
+    <developers>
+        <developer>
+            <id>apenvern</id>
+            <name>PENVERN Arnaud</name>
+            <email>arnaud.pe.it@gmail.com</email>
+            <roles>
+                <role>architect</role>
+                <role>developer</role>
+            </roles>
+        </developer>
+    </developers>    
+
+</project>
